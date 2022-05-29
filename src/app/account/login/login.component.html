@@ -1,0 +1,10 @@
+<div class="login-container">
+  <div class="login">Đăng nhập</div>
+  <form class="form-group" [formGroup]="form" >
+    <input id="phone" formControlName="phone" type="text" class="form-input">
+    <div class="text-red-500 mt-1" *ngIf="phone?.errors && (phone?.dirty || phone?.touched)">Số điện thoại chưa đúng !</div>
+    <input id="password" type="password" formControlName="password" class="form-input">
+    <div class="text-red-500 mt-1" *ngIf="password?.errors && (password?.dirty || password?.touched)">Mật khẩu chưa đúng !</div>
+    <button [disabled]="!form.valid">Đăng nhập</button>
+  </form>
+</div>
