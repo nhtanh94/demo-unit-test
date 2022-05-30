@@ -1,0 +1,16 @@
+.form-control {
+  @apply mt-1 px-3 py-2 focus:ring-primary focus:border-primary block w-full shadow-sm placeholder:text-sm border border-gray-200 rounded-md;
+}
+.form-select {
+  @apply mt-1 py-1 focus:ring-primary focus:border-primary block w-full shadow-sm placeholder:text-sm border border-gray-200 rounded-md;
+}
+.form-radio {
+  @apply px-3 py-2 rounded-md border border-gray-200 m-0 shadow-sm;
+}
+.form-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.btn-primary {
+  @apply py-3 px-5 bg-primary text-white text-center font-semibold rounded  hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+}
