@@ -1,13 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Auth } from './auth';
+import { IAccount } from './account.model';
+import { Auth } from './auth.model';
 
-type Account ={phone:string,password:string,name:string}
 
-@Injectable()
-export class UserService {
 
-accounts:Account[] =[
+
+@Injectable({
+  providedIn: 'root',
+})
+export class AuthService {
+
+accounts:IAccount[] =[
   {
     phone:"0393844575",
     password:"123456",
@@ -21,13 +25,13 @@ accounts:Account[] =[
 ]
 
 
-login(account: Account): Observable<Auth> {
+login(account: IAccount): Observable<Auth> {
   const index = this.accounts.findIndex(x=>x.password === account.password && x.phone === account.phone);
   if(index != -1)
   return of({
     success: true,
     data: {
-      userName:this.accounts[index].name,
+      userName:this.accounts[index].name || '',
       token:"BEAR_23423423",
     },
     error:null

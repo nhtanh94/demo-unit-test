@@ -1,0 +1,17 @@
+{
+  "name": "Tests",
+  "type": "node",
+  "request": "launch",
+  "program": "${workspaceRoot}/node_modules/jest-cli/bin/jest.js",
+  "stopOnEntry": false,
+  "args": ["-i", "-o"],
+  "cwd": "${workspaceRoot}",
+  "preLaunchTask": null,
+  "runtimeExecutable": null,
+  "env": {
+    "NODE_ENV": "test"
+  },
+  "console": "integratedTerminal",
+  "outFiles": ["${workspaceRoot}/dist/**/*"],
+  "sourceMaps": true
+}

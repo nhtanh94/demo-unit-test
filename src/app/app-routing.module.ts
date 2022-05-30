@@ -4,10 +4,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 
 export const routes: Routes = [
-  { path: '', loadChildren: () => import('./account/account.module').then((m) => m.AccountModule) },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'about', component: AboutComponent },
   { path: 'heroes', loadChildren: () => import('./hero/hero.module').then((m) => m.HeroModule) },
-
+  { path: 'login', loadChildren: () => import('./account/account.module').then((m) => m.AccountModule) },
 ];
 
 @NgModule({
